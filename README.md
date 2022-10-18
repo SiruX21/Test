@@ -5,10 +5,10 @@
 
 <p align="center" style="font-size:160%;">
 MC total load time:<br>
-1026.82 sec
+719.23 sec
 <br>
 <sup><sub>(
-17:6 min
+11:59 min
 )</sub></sup>
 </p>
 
@@ -20,8 +20,8 @@ MC total load time:<br>
   type: 'horizontalBar',
   data: {
     datasets: [
-      {label:      'MODS:', data: [693.43]},
-      {label: 'FML stuff:', data: [333.39]}
+      {label:      'MODS:', data: [462.20]},
+      {label: 'FML stuff:', data: [257.03]}
     ]
   },
   options: {
@@ -60,32 +60,31 @@ MC total load time:<br>
   },
   data: {...
 `
-3e76ba 114.89s Just Enough Items;
-386AA7  63.35s Just Enough Items (Plugins);
-5161a8  88.11s CraftTweaker2;
-495797   2.45s CraftTweaker2 (Script Loading);
-214d9e  46.65s Minecraft Forge;
-7c813e  42.42s Thaumcraft;
-9e2174   2.47s Tinkers' Construct;
-8E1E68  38.47s Tinkers' Construct (Oredict Melting);
-a651a8  27.55s IndustrialCraft 2;
-219e2a  23.01s BuildCraft Lib;
-3ebab8  19.76s CoFH World;
-8f304e  17.57s Astral Sorcery;
-8f3087  14.74s Forge Mod Loader;
-8c2ccd  13.03s Immersive Engineering;
-516fa8  12.00s Ender IO;
-3e76ba  10.81s Railcraft;
-6e3a17  10.73s Quark;
-216364   9.02s Thermal Expansion;
-213664   9.01s Forestry;
-5162a8   6.01s Applied Energistics 2;
-3e8160   5.48s The Twilight Forest;
-8f8630   4.75s GenDustry;
-649e21   3.99s OpenBlocks;
-444444  64.48s 37 Other mods;
-333333  39.69s 99 'Fast' mods (load 1.0s - 0.1s);
-222222   3.01s 69 'Instant' mods (load %3C 0.1s)
+3e76ba 119.20s Just Enough Items;
+386AA7  37.87s Just Enough Items (Plugins);
+a651a8  26.36s IndustrialCraft 2;
+7c813e  23.87s Thaumcraft;
+9e2174   2.16s Tinkers' Construct;
+8E1E68  19.84s Tinkers' Construct (Oredict Melting);
+219e2a  17.34s BuildCraft Lib;
+8f3087  15.45s Forge Mod Loader;
+8f304e  13.39s Astral Sorcery;
+516fa8  11.49s Ender IO;
+6e3a17  11.10s Quark;
+216364  10.87s Thermal Expansion;
+3e76ba  10.07s Railcraft;
+5162a8   8.17s Applied Energistics 2;
+213664   7.58s Forestry;
+8c2ccd   7.02s Immersive Engineering;
+3eb2ba   5.41s Botania;
+3e8160   4.40s The Twilight Forest;
+8f8630   4.27s GenDustry;
+a86e51   4.03s Extra Utilities 2;
+3eb6ba   3.71s Chisels & Bits;
+649e21   2.99s OpenBlocks;
+444444  45.30s 26 Other mods;
+333333  47.75s 115 'Fast' mods (load 1.0s - 0.1s);
+222222   2.57s 69 'Instant' mods (load %3C 0.1s)
 `
     .split(';').reduce((a, l) => {
       l.match(/(\w{6}) *(\d*\.\d*)s (.*)/)
@@ -155,18 +154,18 @@ a651a8  27.55s IndustrialCraft 2;
       .forEach(([name]) => a.datasets.push({ label: name, data: [] }));
 `
                           1      2      3      4      5      6      7      8  ;
-CraftTweaker2         |  0.72|  0.00|  1.22|  0.00|  0.00|  0.39| 88.21|  0.00;
-Thaumcraft            |  0.59|  0.02|  0.42|  1.80|  0.01| 39.58|  0.00|  0.00;
-Tinkers' Construct    |  1.00|  0.02|  0.20|  0.08|  0.00| 39.65|  0.00|  0.00;
-IndustrialCraft 2     |  1.20|  0.03| 21.90|  1.46|  0.00|  2.97|  0.00|  0.00;
-BuildCraft Lib        |  0.04|  0.02|  1.26|  0.23|  0.00| 21.46|  0.00|  0.00;
-CoFH World            |  0.05|  0.00|  0.28|  0.00|  0.00|  0.00| 19.43|  0.00;
-Astral Sorcery        |  0.26|  0.01| 13.91|  2.53|  0.00|  0.86|  0.00|  0.00;
-Immersive Engineering |  1.57|  0.02|  1.64|  1.35|  0.00|  8.45|  0.00|  0.00;
-Ender IO              |  2.55|  0.02|  2.87|  0.89|  5.25|  0.41|  0.00|  0.00;
-Railcraft             |  0.28|  0.02|  7.40|  2.19|  0.00|  0.93|  0.00|  0.00;
-Quark                 |  0.02|  0.01|  9.84|  0.24|  0.00|  0.61|  0.00|  0.00;
-Thermal Expansion     |  0.10|  0.01|  1.41|  0.19|  0.13|  6.98|  0.02|  0.18
+IndustrialCraft 2     |  1.61|  0.02| 22.35|  1.20|  0.00|  1.18|  0.00|  0.00;
+Thaumcraft            |  0.73|  0.01|  0.45|  1.13|  0.01| 21.54|  0.00|  0.00;
+Tinkers' Construct    |  1.15|  0.01|  0.24|  0.04|  0.00| 20.55|  0.00|  0.00;
+BuildCraft Lib        |  0.13|  0.02|  1.03|  0.11|  0.00| 16.06|  0.00|  0.00;
+Astral Sorcery        |  0.33|  0.01| 11.00|  1.38|  0.00|  0.67|  0.00|  0.00;
+Ender IO              |  2.25|  0.02|  2.79|  0.98|  5.15|  0.29|  0.00|  0.00;
+Quark                 |  0.05|  0.01| 10.47|  0.13|  0.00|  0.43|  0.00|  0.00;
+Thermal Expansion     |  0.10|  0.01|  1.19|  0.22|  0.13|  9.11|  0.02|  0.10;
+Railcraft             |  0.30|  0.01|  7.00|  2.24|  0.00|  0.52|  0.00|  0.00;
+Applied Energistics 2 |  0.34|  0.02|  5.49|  0.48|  0.18|  1.66|  0.00|  0.00;
+Forestry              |  0.97|  0.02|  5.31|  1.02|  0.02|  0.25|  0.00|  0.00;
+Immersive Engineering |  1.52|  0.01|  1.80|  1.72|  0.00|  1.97|  0.00|  0.00
 `
     .split(';').slice(1)
       .map(l => l.split('|').map(s => s.trim()))
@@ -197,22 +196,22 @@ Thermal Expansion     |  0.10|  0.01|  1.41|  0.19|  0.13|  6.98|  0.02|  0.18
         }]
       };
 `
- 15.84: jeresources.jei.JEIConfig;
- 10.54: com.valkyrieofnight.et.m_plugins.jei.PJEI;
-  8.77: crazypants.enderio.machines.integration.jei.MachinesPlugin;
-  6.49: com.rwtema.extrautils2.crafting.jei.XUJEIPlugin;
-  5.56: binnie.extratrees.integration.jei.ExtraTreesJeiPlugin;
-  3.10: cofh.thermalexpansion.plugins.jei.JEIPluginTE;
-  2.66: mezz.jei.plugins.vanilla.VanillaPlugin;
-  2.07: ic2.jeiIntegration.SubModule;
-  1.55: net.bdew.jeibees.BeesJEIPlugin;
-  1.49: com.buuz135.industrial.jei.JEICustomPlugin;
-  1.32: forestry.factory.recipes.jei.FactoryJeiPlugin;
-  0.76: rustic.compat.jei.RusticJEIPlugin;
-  0.33: crazypants.enderio.base.integration.jei.JeiPlugin;
-  0.32: slimeknights.tconstruct.plugin.jei.JEIPlugin;
-  0.25: mods.railcraft.common.plugins.jei.RailcraftJEIPlugin;
-  2.30: Other 67 Plugins
+  9.61: com.valkyrieofnight.et.m_plugins.jei.PJEI;
+  4.83: binnie.extratrees.integration.jei.ExtraTreesJeiPlugin;
+  4.57: jeresources.jei.JEIConfig;
+  4.50: com.rwtema.extrautils2.crafting.jei.XUJEIPlugin;
+  2.78: crazypants.enderio.machines.integration.jei.MachinesPlugin;
+  1.76: ic2.jeiIntegration.SubModule;
+  1.42: mezz.jei.plugins.vanilla.VanillaPlugin;
+  1.38: cofh.thermalexpansion.plugins.jei.JEIPluginTE;
+  1.08: forestry.factory.recipes.jei.FactoryJeiPlugin;
+  1.06: blusunrize.immersiveengineering.common.util.compat.jei.JEIHelper;
+  0.86: binnie.genetics.integration.jei.GeneticsJeiPlugin;
+  0.75: com.buuz135.industrial.jei.JEICustomPlugin;
+  0.72: net.bdew.jeibees.BeesJEIPlugin;
+  0.36: com.chocohead.AdvMachines.JEICompat;
+  0.24: crazypants.enderio.base.integration.jei.JeiPlugin;
+  1.97: Other 67 Plugins
 `
         .split(';')
         .map(l => l.split(':'))
@@ -249,7 +248,7 @@ Thermal Expansion     |  0.10|  0.01|  1.41|  0.19|  0.13|  6.98|  0.02|  0.18
             font: {size: 18}
           },
           {
-            text: [333.39,'s'].join(''),
+            text: [257.03,'s'].join(''),
             color: 'rgba(128, 128, 128, 1)',
             font: {size: 22}
           }
@@ -269,13 +268,13 @@ Thermal Expansion     |  0.10|  0.01|  1.41|  0.19|  0.13|  6.98|  0.02|  0.18
       }]
     };
 `
-993A00   4.58s Loading sounds;
-994400   4.68s Loading Resource - SoundHandler;
-994F00  35.25s ModelLoader: blocks;
-995900   8.13s ModelLoader: items;
-996300  40.00s ModelLoader: baking;
-996D00  81.29s Indexing ingredients;
-444444 159.45s Other
+993A00   2.90s Loading sounds;
+994400   2.98s Loading Resource - SoundHandler;
+994F00  30.60s ModelLoader: blocks;
+995900   6.56s ModelLoader: items;
+996300  19.68s ModelLoader: baking;
+996D00  89.17s Indexing ingredients;
+444444 105.14s Other
 `
     .split(';')
       .map(l => l.match(/(\w{6}) *(\d*\.\d*)s (.*)/))
